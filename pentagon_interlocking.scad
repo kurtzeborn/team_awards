@@ -137,7 +137,7 @@ module showbadge(image, datetext) {
               linear_extrude (height=lr/2+engrave)
                 import (image);
           linear_extrude (height = lr/2+engrave)
-            text (datetext, font = "Liberation Sans", size = 5, halign="center");
+            text (datetext, font = "Liberation Sans:style=Bold", size = 5, halign="center");
         }//translate
 }//showbadge
 
