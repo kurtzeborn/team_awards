@@ -131,9 +131,11 @@ module showbadge(image, datetext) {
   rotate ([0, 0, internal + internal/2])
     translate ([apothem - margin, -smside/2, lr/2])
       rotate ([0, 0, 90])
-        translate ([twidth*8/2, 0, 0]){
+        translate ([twidth*8/2, 0, 0])
+        {
           translate ([-twidth*12/4, twidth*12/4, 0])
             resize ([twidth*12/2, twidth*12/2, lr/2+engrave])
+              translate([-16,7,0]) // custom translate for event hubs image
               linear_extrude (height=lr/2+engrave)
                 import (image);
           linear_extrude (height = lr/2+engrave)
@@ -151,7 +153,7 @@ module cornerunit1() {
 module award() {
   simpleface();
   cornerlinkjaws();
-  showbadge("images\\Azure_Service_Bus.dxf", "01/2019");
+  showbadge("images\\Azure_Event_Hubs.dxf", "03/2019");
 }//award
 
 //========================================DISPLAY===========================================
